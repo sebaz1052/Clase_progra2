@@ -40,19 +40,19 @@ public class FilePlain {
              System.out.println("Error al escribir en el archivo:" + e.getMessage());
          }
         }
-protected List<String> reader(String rutaNombre¨){
-List<String> output = new Arraylist<>();
-StringTokenizer tokens= new StringTokenizer(this.readFile(rutaNombre), CommonConstants.NEXT.LINE);
-while(tokens.hasMoreElements){
-output.add(token.nextToken());
-}
-return output;
-}
-protected List<String> writer(String rutaNombre¨){
-Realizarlo
-}
-return output;
-}
+	protected List<String> reader(String rutaNombre¨){
+	List<String> output = new Arraylist<>();
+	StringTokenizer tokens= new StringTokenizer(this.readFile(rutaNombre), CommonConstants.NEXT.LINE);
+	while(tokens.hasMoreElements){
+	output.add(token.nextToken());
+	}
+	return output;
+	}
+	protected void writer(String rutaNombre, List<String> file){
+	StringBuilder strContent = new StringBuilder();
+	file.forEach(record -> strContent.append(record).append(CommonConstants.SALTO_LINEA));
+	writeFile(rutaNombre, strContent.toString());
+	}
 }
 
    		
